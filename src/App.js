@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Estoy aprendiendo ReactJS @<a href="http://www.coderhouse.com">CoderHouse</a>
+          Estoy aprendiendo React JS @<a href="http://www.coderhouse.com">CoderHouse</a>
         </a>
       </header>
     </div>
