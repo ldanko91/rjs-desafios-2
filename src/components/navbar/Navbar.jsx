@@ -1,4 +1,5 @@
 import logo from '../../assets/images/logo.jpg';
+import CartWidget from '../CartWidget/CartWidget';
 
 function Navbar() {
     return (
@@ -20,6 +21,7 @@ function Navbar() {
                             <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Ingreso usuarios</a></li>
+                            <li class="nav-item"><CartWidget></CartWidget></li>
                         </ul>
                     </div>
                     <div class="social-header" id="social-header">

@@ -1,0 +1,10 @@
+ul {
+    list-style: none; }
+    ul li {
+        color: chocolate;
+        font-size: 2rem; }
+        ul li a {
+        color: #ec6c85;
+        text-decoration: none; }
+        ul li a:hover {
+            color: darkred; }
