@@ -6,16 +6,18 @@ import './components/CartWidget/CartWidget.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
 import CartWidget from './components/CartWidget/CartWidget';
-import ILC from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount'
+
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Navbar><CartWidget></CartWidget></Navbar>
-       <ILC propiedad="greeting"></ILC>
+      <Navbar><CartWidget></CartWidget></Navbar>
       </header>
+      <ItemListContainer propiedad="greeting"></ItemListContainer>
     </div>
   );
 }
