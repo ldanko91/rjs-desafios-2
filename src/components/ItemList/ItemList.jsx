@@ -1,20 +1,22 @@
 import { Item } from "../Item/Item"
 import React, { useState } from 'react'
 
-export const ItemList = (props) => {
-    const [tanque, setTanque] = useState();
-
-    }
+const ItemList = (props) => {
+    const [tanques, setTanques] = useState([]);
+    setTanques(props);
 
     return (
-        <div>
-        {
-            tanque.map((tanque)=>{
-                return(
-                    <Item tanque={tanque}/>
-                    )
-                })
-            }
-        </div>
+        console.log(tanques) 
+        // <>
+        // {
+        //     tanques.map((tanque)=>{
+        //         return(
+        //             <Item tanque={tanque}/>
+        //             )
+        //         })
+        //     }
+        // </>
     )
+}
 
+export default ItemList;

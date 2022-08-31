@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {ItemList} from '../ItemList/ItemList'
+import ItemList from '../ItemList/ItemList'
 import tanquesImpor from '../../assets/js/newtanques'
 
 
@@ -32,7 +32,7 @@ function ItemListContainer () {
             
             tanques.length>0 &&
                 <>
-                    <ItemList id={tanques.id} nombre={tanques.nombre} precio={tanques.precio}></ItemList>
+                    <ItemList tanque={tanques}></ItemList>
                 </>
         
     )
