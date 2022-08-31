@@ -20,7 +20,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return(
         <div>
-            <Button variant="secondary" onClick={adItem}>+</Button><p class='Recuento'>{itemCount}</p><Button variant="secondary" onClick={subItem}>-</Button>
+            <Button variant="secondary" onClick={adItem}>+</Button>
+            <p class='Recuento'>{itemCount}</p>
+            <Button variant="secondary" onClick={subItem}>-</Button>
         </div>
     )
 }
