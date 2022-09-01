@@ -26,13 +26,14 @@ function ItemListContainer () {
             }
         }
         procAsync();
-    },[])
+    },[tanques])
 
         return (
             
             tanques.length>0 &&
                 <>
                     <ItemList tanque={tanques}></ItemList>
+                    {console.log(tanques)}
                 </>
         
     )

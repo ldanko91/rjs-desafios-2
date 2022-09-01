@@ -1,7 +1,8 @@
+import  '../Item/Item.css'
 import React, { useState } from 'react'
 
 export const Item = ({tanque}) => {
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState([]);
 
     const incrementar = ()=>{
         setCantidad(cantidad + 1);
