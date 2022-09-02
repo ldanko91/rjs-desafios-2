@@ -1,0 +1,10 @@
+.item-container{
+    border: 2px;
+    border-radius: 2px;
+    color: wheat;
+    background-color: crimson;
+}
+
+.item-detail {
+    background-color: wheat;
+}
