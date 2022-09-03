@@ -1,19 +1,16 @@
 import  '../Item/Item.css'
-import React, { useState } from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 
-export const Item = ({tanque}) => {
-    const [cantidad, setCantidad] = useState([]);
-
-    const incrementar = ()=>{
-        setCantidad(cantidad + 1);
-    }
+export const Item = ({tanque}) => {   
 
     return (
         <div className='itemTanque'>
+            <img src={tanque.img} class='img-tanq'></img>
             <p>{tanque.nombre}</p>
             <p>ID: {tanque.id}</p>
             <p>Precio: {tanque.precio}</p>
-            <button onClick={incrementar}>+</button>
+            <ItemCount initial={1} stock={tanque.stock}></ItemCount>
         </div>
+
     )
 }

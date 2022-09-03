@@ -9,6 +9,7 @@ const tanquesImpor = [
         nombre: 'Tanque 500 lts bicapa',
         img: bcp500,
         precio: 9000,
+        stock: 10,
 
     },
 
@@ -17,6 +18,7 @@ const tanquesImpor = [
         nombre: 'Tanque 500 lts tricapa',
         img: tcp500,
         precio: 12000,
+        stock: 14,
 
     },
 
@@ -25,6 +27,7 @@ const tanquesImpor = [
         nombre: 'Tanque 750 lts bicapa',
         img: bcp750,
         precio: 14000,
+        stock: 15,
 
     },
 
@@ -33,6 +36,7 @@ const tanquesImpor = [
         nombre: 'Tanque 750 lts tricapa',
         img: tcp750,
         precio: 19000,
+        stock: 10,
 
     },
 ]

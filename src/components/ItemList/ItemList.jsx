@@ -1,13 +1,11 @@
 import { Item } from "../Item/Item"
-import React, { useState } from 'react'
 
-const ItemList = (props) => {
+
+const ItemList = ({tanque}) => {
     
-    const tanque = props;
-    const tanques = Object.entries(tanque);
+    const tanques = tanque
 
     return (
-        // console.log(tanques) 
         <>
         <div>
         {

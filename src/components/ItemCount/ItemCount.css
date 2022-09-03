@@ -1,3 +1,9 @@
+.qSelector{
+    width: 200 px;
+    height: 150px;
+    background-color: grey;
+}
 .Recuento{
-    color: red
+    background-color: antiquewhite;
+    color: red;
 }
