@@ -1,4 +1,5 @@
 import { Item } from "../Item/Item"
+import { Link } from "react-router-dom"
 
 
 const ItemList = ({tanque}) => {
@@ -12,7 +13,9 @@ const ItemList = ({tanque}) => {
             tanques.map((tanque)=>{
                 return(
                     <div >
-                    <Item tanque={tanque}/>
+                        <Link key={tanque.id} to={`/items/${tanque.id}`}>
+                            <Item tanque={tanque}/>
+                        </Link>
                     </div>
                     )
                 })

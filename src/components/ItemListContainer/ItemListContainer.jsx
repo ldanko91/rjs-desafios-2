@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList'
 import tanquesImpor from '../../assets/js/newtanques'
 
 
 function ItemListContainer () {
-    const [tanques, setTanques] = useState([]);
+    const {rubroParam} = useParams()
+    console.log(rubroParam)
 
+    const [tanques, setTanques] = useState([]);
+    
     const obtenerTanques = ()=>{
         return new Promise((resolve, reject)=>{
             setTimeout(() => {
@@ -17,16 +21,27 @@ function ItemListContainer () {
 
     useEffect(()=>{
         const procAsync = async()=>{
-            try {
-                const listadoTanques = await obtenerTanques();
-                setTanques(listadoTanques);
-                console.log('listado de tanques: ',listadoTanques);
-            } catch (error) {
-                console.log('Error 404: Not found')
+            if (!rubroParam) {
+                try {
+                    const listadoTanques = await obtenerTanques();
+                    setTanques(listadoTanques);
+
+                } catch (error) {
+                    console.log('Error 404: Not found')
+                }
+            }else{
+            
+                try {
+                    const listadoTanques = await obtenerTanques();
+                    setTanques(listadoTanques.filter(item=>item.rubro === rubroParam));
+                    
+                } catch (error) {
+                    console.log('Error 404: Not found')
+                }
             }
         }
         procAsync();
-    },[tanques])
+    },[rubroParam])
 
         return (
             

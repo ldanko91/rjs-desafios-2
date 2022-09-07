@@ -9,7 +9,7 @@ export const Item = ({tanque}) => {
             <p>{tanque.nombre}</p>
             <p>ID: {tanque.id}</p>
             <p>Precio: {tanque.precio}</p>
-            <ItemCount initial={1} stock={tanque.stock}></ItemCount>
+            {/* <ItemCount initial={1} stock={tanque.stock}></ItemCount> */}
         </div>
 
     )
