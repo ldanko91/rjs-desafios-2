@@ -21,8 +21,8 @@ const [tanques, setTanques] = useState([]);
 
     useEffect(()=>{
         const procAsync = async()=>{
-          setLoading(false)  
-          
+        setLoading(false)  
+
                 try {
                     const prodSel = await obtenerTanques();
                     setTanques(prodSel.find(item=>item.id == idParam));
@@ -33,7 +33,7 @@ const [tanques, setTanques] = useState([]);
                     console.log('Error 404: Not found')
                 }
                 
-              }
+            }
         
         procAsync();
         
