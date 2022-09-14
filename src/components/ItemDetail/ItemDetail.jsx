@@ -1,18 +1,20 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
+
 
 const ItemDetail = ({detalle}) => {
-    const [cuenta , setCuenta] = useState (0)
+    const {addProduct} = useContext(CartContext);
+    // const [cuenta , setCuenta] = useState (0)
     const onAdd = (contador) => {
-        setCuenta(contador)
+        // setCuenta(contador)
         console.log(contador)
-        console.log(`Has añadido ${cuenta} unidades al carrito`)
-        // setTimeout(() => {
-        //     const navigate = useNavigate();
-        //     navigate("/cart");
-        // }, 3000);
+        // console.log(`Has añadido ${cuenta} unidades al carrito`)
+        const newProduct = {...detalle, qty: contador}
+        console.log('newProduct', newProduct)
+        addProduct(newProduct)
     }
     const data = detalle
 
