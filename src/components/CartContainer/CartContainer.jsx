@@ -2,25 +2,35 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext'
 import { Button } from 'bootstrap';
+import {Link} from 'react-router-dom';
 
 function CartContainer() {
-    const {productCartList, deleteProduct, clearProductCartList} = useContext(CartContext);
-    // console.log('productCL', productCartList)
+    const {productCartList, deleteProduct, clearProductCartList, precioTotal} = useContext(CartContext);
+
 
     return (
         <div>
-            Este es el carrito
+            
             {
+                productCartList.length>0 ?
                 productCartList.map(item=>(
-                    <div>
+                    <>
                         <p>{item.quantity}</p>
                         <p>{item.nombre}</p>
                         <p>Precio unitario: ${item.precio}.-</p>
+                        <p>Subtotal: ${item.totPrice}.-</p>
                         <button onClick={()=>deleteProduct(item.id)}>Eliminar del carrito</button>
-                    </div>
+                        <button onClick={clearProductCartList}>Vaciar Carrito</button>
+                        <h2>El total de tu compra es ${precioTotal()}.-</h2>
+                    </>
                 ))
+                :
+                <>
+                    <p>El carrito está vacío!</p>
+                    <Link to='/'><button>Ir a la tienda!</button></Link>
+                </>
             }
-            <button onClick={clearProductCartList}>Vaciar Carrito</button>
+            
         </div>
     );
 }
