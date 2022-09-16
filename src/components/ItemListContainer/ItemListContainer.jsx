@@ -6,7 +6,6 @@ import tanquesImpor from '../../assets/js/newtanques'
 
 function ItemListContainer () {
     const {rubroParam} = useParams()
-    console.log(rubroParam)
 
     const [tanques, setTanques] = useState([]);
     
@@ -48,7 +47,6 @@ function ItemListContainer () {
             tanques.length>0 &&
                 <>
                     <ItemList tanque={tanques}></ItemList>
-                    {console.log(tanques)}
                 </>
         
     )

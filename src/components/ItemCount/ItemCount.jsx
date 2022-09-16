@@ -4,8 +4,9 @@ import Button from 'react-bootstrap/Button';
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
+    
     const [itemCount, setitemCount] = useState (initial);
-
+    
     const adItem = ()=>{
         if (itemCount<stock) {
         setitemCount(itemCount + 1)
@@ -23,7 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <Button variant="secondary" onClick={adItem}>+</Button>
             <p class='Recuento'>{itemCount}</p>
             <Button variant="secondary" onClick={subItem}>-</Button> <br></br>
-            <Button variant="primary" onClick={()=>{onAdd(true)}}>Añadir al carrito!</Button>
+            <Button variant="primary" onClick={()=>{onAdd(itemCount)}} >Añadir al carrito!</Button>
         </div>
     )
 }

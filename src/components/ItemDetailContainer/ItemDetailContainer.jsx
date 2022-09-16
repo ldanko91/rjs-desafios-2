@@ -26,8 +26,7 @@ const [tanques, setTanques] = useState([]);
                 try {
                     const prodSel = await obtenerTanques();
                     setTanques(prodSel.find(item=>item.id == idParam));
-                    console.log('prodsel', prodSel);
-                    console.log('tanques filtrada', tanques);
+                    
                     
                 } catch (error) {
                     console.log('Error 404: Not found')

@@ -1,10 +1,9 @@
 import { createContext, useState } from "react";
-import TanquesImpor from '../assets/js/newtanques'
 
 export const CartContext = createContext();
 
 export const CartProvider = ({children})=>{
-    // const productCartList = TanquesImpor;
+    
     const [productCartList, setProductCartList] = useState([]);
 
     const isInCart = (id)=>{
@@ -14,14 +13,16 @@ export const CartProvider = ({children})=>{
     }
     
     const addProduct = (product, qty)=>{
+        
         const newList = [...productCartList]
         if(isInCart(product.id)){
-            const productIndex  = productCartList.findIndex( elemento=> elemento.id == product.id);
+            const productIndex  = productCartList.findIndex( elemento=> elemento.id === product.id);
             newList[productIndex].quantity = newList[productIndex].quantity + qty;
             setProductCartList(newList)
         } else {
-
-            const newList = [...productCartList,product];
+            const newProduct = {...product, quantity: qty}
+            const newList = [...productCartList];
+            newList.push(newProduct);
             setProductCartList(newList);
         }
 

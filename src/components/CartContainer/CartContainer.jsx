@@ -5,7 +5,7 @@ import { Button } from 'bootstrap';
 
 function CartContainer() {
     const {productCartList, deleteProduct, clearProductCartList} = useContext(CartContext);
-    console.log('productCL', productCartList)
+    // console.log('productCL', productCartList)
 
     return (
         <div>
