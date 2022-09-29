@@ -9,8 +9,8 @@ import {Link} from 'react-router-dom';
 function CartContainer() {
     const { productCartList, deleteProduct, clearProductCartList, precioTotal } = useContext(CartContext);
 
-    const [idOrder, setIdOrder] = useState("");
-    const [ordenCheck, setOrdenCheck] = useState ("");
+    // const [idOrder, setIdOrder] = useState("");
+    // const [ordenCheck, setOrdenCheck] = useState ("");
 
     const sendOrder = (e) => {
         e.preventDefault();
@@ -28,11 +28,12 @@ function CartContainer() {
         
         const queryRef = collection(db, "orders");
         
-        addDoc(queryRef, order).then(respuesta => setIdOrder(respuesta.id))
-        Swal.fire(
-            '¡Tu orden fue registrada exitosamente!',
-            `Tus ${productCartList.length} productos fueron registrados con el ID: ${idOrder}. A la brevedad nos comunicaremos, ¡gracias! `,
-            'success')
+        addDoc(queryRef, order).then(respuesta => {
+            Swal.fire(
+                '¡Tu orden fue registrada exitosamente!',
+                `Tus ${productCartList.length} productos fueron registrados con el ID: ${respuesta.id}. A la brevedad nos comunicaremos, ¡gracias! `,
+                'success')
+        })
     }
 
     // const checkOrder = (e) => {
@@ -91,13 +92,13 @@ function CartContainer() {
                     </>
             }
             
-            <>
+            {/* <>
                 <h2>Consultar pedidos</h2>
                 <form onSubmit={checkOrder}>
                     <input type="text" placeholder='ID de orden'/><br/>
                     <button type='submit'>¡Comprar!</button>
                 </form>
-            </>
+            </> */}
 
         </div>
     );
