@@ -33,7 +33,7 @@ Al acceder se podrán ver los distintos productos agregados, y podrá:
 
 
 ## Video de muestra
-![Gif Buyer Path](../casa-danko-app/src/assets/images/gif-buyer-path.gif)
+![Gif Buyer Path](https://github.com/ldanko91/rjs-desafios-2/blob/entrega-final/src/assets/images/gif-buyer-path.gif)
 
 
 ## Aclaraciones del alcance
