@@ -1,59 +1,132 @@
 * {
     font-family: 'Alata', sans-serif;
     font-family: 'Lato', sans-serif;
-    font-size: 14px; }
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+}
 
-body {
-color: #a50202; }
+/* body {
+    color: #a50202;
+} */
 
 h3 {
-color: #300f0f; }
+    color: #300f0f;
+}
 
 ul {
-list-style: none; }
+    list-style: none;
+}
+
 ul li {
     color: chocolate;
-    font-size: 2rem; }
-    ul li a {
+    font-size: 2rem;
+}
+
+ul li a {
     color: #ec6c85;
-    text-decoration: none; }
-    ul li a:hover {
-        color: darkred; }
+    text-decoration: none;
+}
+
+/* ul li a:hover {
+    color: darkred;
+} */
 
 h1 {
-font-size: 4rem;
-font-weight: bolder; }
+    font-size: 3rem;
+    font-weight: bolder;
+}
 
 h2 {
-font-size: 2rem;
-font-weight: bold; }
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+}
 
 p {
-font-size: 1rem; }
+    font-size: 1rem;
+}
 
-header * {
-font-size: xx-large; }
 
-.estilo-map, .estilo-map--extend {
-color: crimson;
-text-align: center;
-font-size: 2rem;
-font-weight: bold; }
+.App {
+    text-align: center;
+}
+
+/* .estilo-map,
+.estilo-map--extend {
+    color: crimson;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .estilo-map--extend {
-font-size: 2.5rem;
-color: darkred; }
+    font-size: 2.5rem;
+    color: darkred;
+} */
 
-.mixin1 {
-height: 3rem;
-background-color: #dfbfbf;
-padding: 5px; }
-
-.mixin2 {
-height: 5rem;
-background-color: #9c9c9c;
-padding: 10px; }
 
 .imgLogo {
     border-radius: 100%;
+}
+
+.nav2Cont {
+    display: flex;
+    flex-direction: inline;
+    background-color: lightcoral;        
+}
+
+.nav2Head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+.carrito {
+    width: 50px;
+    height: 50px;
+    background-color: crimson;
+}
+
+
+a.img{
+    height: 50px;
+    width: 50px;
+
+}
+
+div.nav-item{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+li.nav-item{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a.nav-link{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.social-header{
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar {
+    display: flexbox;
+    align-items: center;
+    justify-content: flex-start;
 }

@@ -1,9 +1,21 @@
-.qSelector{
-    width: 200 px;
-    height: 150px;
-    background-color: grey;
+#count-card{
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3%;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: lightgray 10px 10px 10px 10px;
 }
-.Recuento{
-    background-color: antiquewhite;
-    color: red;
+
+.recuento{
+    color: brown;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-count{
+    background-color: wheat;
 }

@@ -1,5 +1,7 @@
 import { Item } from "../Item/Item"
 import { Link } from "react-router-dom"
+import CardGroup from 'react-bootstrap/CardGroup';
+
 
 
 const ItemList = ({tanque}) => {
@@ -8,19 +10,19 @@ const ItemList = ({tanque}) => {
 
     return (
         <>
-        <div>
+        <CardGroup>
         {
             tanques.map((tanque)=>{
                 return(
-                    <div >
+                    
                         <Link key={tanque.id} to={`/items/${tanque.id}`}>
                             <Item tanque={tanque}/>
                         </Link>
-                    </div>
+                    
                     )
                 })
             }
-        </div>
+        </CardGroup>
         </>
     )
 }

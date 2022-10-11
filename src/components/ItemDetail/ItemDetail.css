@@ -1,10 +1,35 @@
 .item-container{
     border: 2px;
     border-radius: 2px;
-    color: wheat;
-    background-color: crimson;
+    color: blanchedalmond;
+    display: inline-flex;
 }
 
 .item-detail {
-    background-color: wheat;
+    display: flex;
+    align-items: center;
+    background-color: blanchedalmond;
+    width: 66%;
+    border-radius: 15%;
+    box-shadow: 5px;
 }
+
+.img-det{
+    height: 400px;
+    width: 250px;
+}
+
+.footer-card{
+    height: 1000px;
+}
+
+#det-card{
+    width: 600px;
+    display: inline-flex;
+    background-color: blanchedalmond;
+    border-radius: 3%;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: lightgray 10px 10px 10px 10px;
+}
+

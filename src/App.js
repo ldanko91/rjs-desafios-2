@@ -1,15 +1,14 @@
 import './App.css';
-import { CartProvider } from './context/CartContext';
 import './components/navbar/Navbar.css'
-import './components/CartWidget/CartWidget.css'
+import { CartProvider } from './context/CartContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Nosotros from './components/Nosotros/Nosotros';
 import Contacto from './components/Contacto/Contacto';
 import CartContainer from './components/CartContainer/CartContainer';
+import Navbar2 from './components/Navbar2/Navbar2';
 
 function App() {
   
@@ -18,7 +17,7 @@ function App() {
     <BrowserRouter>
 
     <div className="App">
-      <Navbar/>
+      <Navbar2/>
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
         <Route path='/category/:rubroParam' element={<ItemListContainer/>}/>

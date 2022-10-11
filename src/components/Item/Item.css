@@ -1,9 +1,46 @@
 .itemTanque{
-    background-color: crimson;
-    color: white;
+    background-color: blanchedalmond;
+    border-radius: 5%;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: lightgrey 10px 10px 10px 10px;
+}
+
+.card-group{
+    background-color: blanchedalmond;
 }
 
 .img-tanq{
-    height: 600px;
-    width: 400px;
+    height: 480px;
+    width: 300px;
+}
+
+.card-card{
+    border-radius: 20%;
+    width: 600px;
+    height: 100px;
+}
+
+.body-card{
+    border-radius: 20%;
+    width: 500px;
+    height: 200px;
+}
+
+.titulo-card{
+    color: brown;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.texto-card{
+    color: rgb(179, 119, 119);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.id-card{
+    color: rgb(179, 119, 119);
+    font-size: 1rem;
+    font-weight: bold;
 }

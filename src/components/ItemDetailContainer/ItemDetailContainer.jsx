@@ -1,9 +1,11 @@
+import '../ItemDetailContainer/ItemDetailContainer.css'
 import React from 'react'
 import {useState,useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { db } from '../../utils/firebase'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
+import CardGroup from 'react-bootstrap/CardGroup';
 
 const ItemDetailContainer = () => {
 
@@ -25,10 +27,12 @@ useEffect(()=>{
 },[idParam])
 
 return (
-    <div className="item-container">
-            <h1>Detalle del producto: {tanques.nombre}</h1>
-            <ItemDetail detalle={tanques}></ItemDetail>        
-    </div>
+    <CardGroup class='detail-card-group'>
+        <h2>Detalle del producto: {tanques.nombre}</h2>
+        <div className="item-container">
+            <ItemDetail detalle={tanques}></ItemDetail>
+        </div>
+    </CardGroup>
     )
 }
 

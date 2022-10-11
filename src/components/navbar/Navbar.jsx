@@ -1,11 +1,14 @@
 import logo from '../../assets/images/logo.jpg';
 import CartWidget from '../CartWidget/CartWidget';
+import '../navbar/Navbar.css' 
 import {Link} from 'react-router-dom'
+import { Nav } from 'react-bootstrap';
 
 function Navbar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger" id="navbar">
-            <div class="container-fluid px-5 py-5 cont-nav">
+        <>
+        <Nav class="navbar navbar-expand-lg navbar-dark bg-danger" id="navbar">
+            <div class="container px-3 py-3 cont-nav">
                 <Link to='/'><img src={logo} alt='logo-casa-danko' class='imgLogo'/></Link>
                 <div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -13,18 +16,12 @@ function Navbar() {
                     <h2 class="text-white fw-bold nombre2-navbar">Sanitarios & Amoblamientos</h2>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 drop">
-                            <li class="nav-item"><Link to='/' class="nav-link">Home</Link></li>
-                            <li class="nav-item"><Link to='/category/tanques' class="nav-link">Tanques</Link></li>
-                            <li class="nav-item"><Link to='/category/vanitorys' class="nav-link">Vanitorys</Link></li>
-                            <li class="nav-item"><Link to='/nosotros' class="nav-link">Nosotros</Link></li>
-                            {/* <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li> */}
-                            {/* <li class="nav-item"><a class="nav-link" href="#">Cotizador</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ideas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Partners</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li> */}
-                            <li class="nav-item"><Link to='/contacto' class="nav-link">Contacto</Link></li>
-                            {/* <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li> */}
-                            {/* <li class="nav-item"><a class="nav-link" href="#">Ingreso usuarios</a></li> */}
+                            <Nav.Item><li class="nav-item"><Link to='/' class="nav-link">Home</Link></li></Nav.Item>
+                            <Nav.Item><li class="nav-item"><Link to='/category/tanques' class="nav-link">Tanques</Link></li></Nav.Item>
+                            <Nav.Item><li class="nav-item"><Link to='/category/vanitorys' class="nav-link">Vanitorys</Link></li></Nav.Item>
+                            <Nav.Item><li class="nav-item"><Link to='/nosotros' class="nav-link">Nosotros</Link></li></Nav.Item>
+                            <Nav.Item><li class="nav-item"><Link to='/contacto' class="nav-link">Contacto</Link></li></Nav.Item>
+                            <Nav.Item><li class="nav-item"><a class="nav-link" href="#">Ingreso usuarios</a></li></Nav.Item>
                             <li class="nav-item"><CartWidget></CartWidget></li>
                         </ul>
                     </div>
@@ -48,8 +45,15 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+        </Nav>
+                    
+        </>
+        
     )
 }
 
 export default Navbar;
+
+
+
+

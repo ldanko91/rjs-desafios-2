@@ -1,9 +1,8 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState, useContext } from 'react'
-// import { Link } from 'react-router-dom'
+import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-import { useEffect } from 'react'
+import Card from 'react-bootstrap/Card';
 
 
 const ItemDetail = ({detalle}) => {
@@ -12,43 +11,23 @@ const ItemDetail = ({detalle}) => {
         addProduct(detalle, count)
         }
 
-            return (
-                <div className="item-detail">
-                    <img src={detalle.img} alt={detalle.nombre} />
-                    <h3>Precio ${detalle.precio}.-</h3>
-                    <ItemCount stock={detalle.stock} initial={1} onAdd={onAdd}/>   
-                </div>
-            )
+    return (
+        <>
+            <Card id='det-card'>
+                <Card.Img variant="top" src={detalle.img} alt={detalle.nombre} class='img-det' />
+                <Card.Body class='card-det'>
+                    <Card.Title class='titulo-card'>{detalle.nombre}</Card.Title>
+                    <Card.Text class='texto-card'>
+                        Precio unitario: ${detalle.precio}.- <br />
+                        <span class='id-card'>ID: {detalle.id}</span>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+
+            <ItemCount stock={detalle.stock} initial={1} onAdd={onAdd} />
+        </>
+    )
 }
 
 
 export default ItemDetail
-
-
-
-// const {addProduct} = useContext(CartContext);        
-//         useEffect(()=>{
-                    
-//             const newProduct = {...detalle, quantity: count}
-//                 console.log('newProduct', newProduct)
-//                 addProduct(newProduct)
-//         },[onAdd])
-//         if (onAdd) {
-            
-//             return (
-//                 <div className="item-detail">
-//                     <img src={detalle.img} alt={detalle.nombre} />
-//                     <h3>Precio ${detalle.precio}.-</h3>
-//                     <Link to='/cart'><button>Finalizar compra!</button></Link>
-//                 </div>
-//             )
-//         } else {
-//             return (
-//                 <div className="item-detail">
-//                     <img src={detalle.img} alt={detalle.nombre} />
-//                     <h3>Precio ${detalle.precio}.-</h3>
-//                     <ItemCount stock={detalle.stock} initial={1} onAdd={setOnAdd} qty={setQty}/>   
-//                 </div>
-//             )
-//         }
-// }
